@@ -11,6 +11,9 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: "auto",
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,svg,webp}"], // Ensures files are cached
+      },
       devOptions: {
         enabled: true,
       },

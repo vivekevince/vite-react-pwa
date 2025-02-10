@@ -5,10 +5,12 @@ import { VitePWA } from "vite-plugin-pwa";
 // https://vite.dev/config/
 
 export default defineConfig({
+  base: "/vite-react-pwa/",
   plugins: [
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "auto",
       devOptions: {
         enabled: true,
       },

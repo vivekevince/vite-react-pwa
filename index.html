@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme Color for PWA -->
+    <meta name="theme-color" content="#ffffff" />
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="/assets/index-Dla6ZdmG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-n_ryQ3BS.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Register Service Worker for PWA -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => console.log("Service Worker registered:", reg))
+            .catch((err) =>
+              console.error("Service Worker registration failed:", err)
+            );
+        });
+      }
+    </script>
+  </body>
+</html>
